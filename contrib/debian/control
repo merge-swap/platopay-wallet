@@ -1,0 +1,68 @@
+Source: platopay
+Section: utils
+Priority: optional
+Maintainer: Holger Schinzel <holger@platopay.org>
+Uploaders: Holger Schinzel <holger@platopay.org>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.35),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.35),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.35),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.35),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.35),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.35),
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://www.platopay.org/
+Vcs-Git: git://github.com/platopaycoin/platopay.git
+Vcs-Browser: https://github.com/platopaycoin/platopay
+
+Package: platopayd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ PlatoPay is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. PlatoPay uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. PlatoPay Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, platopayd, and the CLI tool
+ platopay-cli to interact with the daemon.
+
+Package: platopay-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ PlatoPay is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. PlatoPay uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. PlatoPay Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides PlatoPay-Qt, a GUI for PlatoPay based on Qt.
+
+Package: platopay-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ PlatoPay is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. PlatoPay uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. PlatoPay Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides platopay-tx, a command-line transaction creation
+ tool which can be used without a platopay daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.

@@ -1,0 +1,11 @@
+[Protocol]
+exec=platopay-qt '%u'
+protocol=platopay
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

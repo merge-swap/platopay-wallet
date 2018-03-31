@@ -1,0 +1,22 @@
+[Unit]
+Description=PlatoPay's distributed currency daemon
+After=network.target
+
+[Service]
+User=platopaycore
+Group=platopaycore
+
+Type=forking
+PIDFile=/var/lib/platopayd/platopayd.pid
+ExecStart=/usr/bin/platopayd -daemon -pid=/var/lib/platopayd/platopayd.pid \
+-conf=/etc/platopaycore/platopay.conf -datadir=/var/lib/platopayd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

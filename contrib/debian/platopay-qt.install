@@ -1,0 +1,6 @@
+usr/local/bin/platopay-qt usr/bin
+share/pixmaps/platopay32.xpm usr/share/pixmaps
+share/pixmaps/platopay16.xpm usr/share/pixmaps
+share/pixmaps/platopay128.png usr/share/pixmaps
+debian/platopay-qt.desktop usr/share/applications
+debian/platopay-qt.protocol usr/share/kde4/services/
